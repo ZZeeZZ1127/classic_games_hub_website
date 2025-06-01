@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif; 
+  color: white;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.programmers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  height: 100vh;
+  position: fixed;
+  z-index: 0;
+}
+
+.programmers img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.overlay{
+  display: grid;
+  position: fixed;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 1;
+  
+}
+
+.gamePageLinks {
+  position: fixed;
+  z-index: 1;
+  color:white;
+}
+
+/*navigation bars*/
+#navBars {
+  display: inline-block;
+  flex-direction: row;
+  max-height: 5rem;
+  position: fixed;
+  z-index: 3;
+}
+
+.navButtons {
+  font-size:20px;
+  font-family: Audiowide;
+  text-decoration: none;
+  color: white;
+  padding: 2.25rem;
+}
+
+.navButtons:hover{
+  opacity: 0.7;
+}
+
+h1 {
+  font-family: Rubik Glitch, Ubuntu;
+  font-size: 4em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-family: Rubik Glitch, Ubuntu;
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-family: "Press Start 2P";
+  font-size: 1.5em;
+}
+
+p {
+  font-family: VT323;
+  font-size: 1.5em;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/*new*/
+
+.title {
+  position: absolute;
+  z-index: 3;
+  top: 9%;
+  left: 5%;
+}
+
+.GUI {
+  position: absolute;
+  z-index: 3;
+  top: 15%;
+  left: 5%;
+}
+
+.GUI img {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.profile {
+  position: absolute;
+  z-index: 3;
+  top: 15%;
+  left: 39%;
+}
+
+.profile img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.profileName {
+  position: absolute;
+  z-index: 3;
+  top: 18%;
+  left: 46%;
+}
+
+.intro {
+  position: absolute;
+  z-index: 3;
+  top: 24%;
+  left: 46%;  
+}
+
+.linkIcon {
+  position: absolute;
+  z-index: 3;
+  top: 62%;
+  left: 40%;  
+}
+
+.linkIcon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.link {
+  position: absolute;
+  z-index: 3;
+  top: 63%;
+  left: 45%;
+}
+
+.link a {
+  color: white;
+  font-family: VT323;
+  font-size: 30px;
+}
+
+
+

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Classic Games Hub</title>
+    <link rel="stylesheet" href="index.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Rubik+Glitch&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Outfit:wght@100..900&family=Rubik+Glitch&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Outfit:wght@100..900&family=Rubik+Glitch&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Outfit:wght@100..900&family=Press+Start+2P&family=Rubik+Glitch&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="hero">
+      <div class="programmers">
+        <img src="/homepage_images/zeen_zheng_12.jpg" />
+        <img
+          src="/homepage_images/phil_yao.jpg"
+          ,
+          style="object-position: right center"
+        />
+        <img
+          src="/homepage_images/mark_liu.jpg"
+          ,
+          style="object-position: right center"
+        />
+        <img
+          src="/homepage_images/charlie_ma.JPG"
+          ,
+          style="object-position: bottom center"
+        />
+        <div class="overlay"></div>
+        <nav id="navBars">
+          <a class="navButtons" href="index.html">Home</a>
+          <a class="navButtons" href="ZeenGamePage.html">Zeen's Game Page</a>
+          <a class="navButtons" href="PhilGamePage.html">Phil's Game Page</a>
+          <a class="navButtons" href="CharlieGamePage.html"
+            >Charlie's&nbsp;Game&nbsp;Page</a
+          >
+          <a class="navButtons" href="MarkGamePage.html"
+            >Mark's&nbsp;Game&nbsp;Page</a
+          >
+        </nav>
+      </div>
+
+      <div class="title">
+        <h1>Classic Games</h1>
+        <p>Scroll down to meet our team</p>
+        <p>(well you can see from the background 😅)</p>
+      </div>
+    </div>
+
+    <div class="fade-in">
+      <h2 class="title">Team Untitled</h2>
+      <div class="intro">
+        <div class="member">
+          <h3>Zeen Zheng</h3>
+          <p>Grade: 12</p>
+          <p>Team Role: Minesweeper + Website Developer</p>
+        </div>
+        <div class="member">
+          <h3>Phil Yao</h3>
+          <p>Grade: 10</p>
+          <p>Team Role: Hang-Man Developer</p>
+        </div>
+        <div class="member">
+          <h3>Mark Liu</h3>
+          <p>Grade: 10</p>
+          <p>Team Role: Tic-Tac-Toe Developer</p>
+        </div>
+        <div class="member">
+          <h3>Charlie Ma</h3>
+          <p>Grade: 11</p>
+          <p>Team Role: mini-Wordle Developer</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fade-in">
+      <h2>Project Introduction</h2>
+      <p>
+        It all started with Zeen’s Wordle Solver (which, in his own words,
+        “kinda sucks tbh“). Then Charlie was like, “Why don’t we just make a
+        Wordle game?” But just Wordle? For a team of four? A bit too basic. So
+        Zeen threw in the idea of Minesweeper — he’s a huge fan (plays it almost
+        every class). Then Phil jumped in: “I could do a Hangman game,” and
+        suddenly the idea clicked — why not each make a classic game we like and
+        bundle them together into one cool site or app? And… here we are :)
+      </p>
+    </div>
+
+    <script>
+      const faders = document.querySelectorAll(".fade-in");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            } else {
+              entry.target.classList.remove("visible");
+            }
+          });
+        },
+        { threshold: 0.8 }
+      );
+
+      faders.forEach((el) => observer.observe(el));
+    </script>
+
+    <script>
+      const titleElement = document.querySelector(".title");
+
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        const fadeStart = 0;
+        const fadeEnd = 300;
+
+        let opacity = 1;
+        if (scrollY <= fadeStart) {
+          opacity = 1;
+        } else if (scrollY >= fadeEnd) {
+          opacity = 0;
+        } else {
+          opacity = 1 - (scrollY - fadeStart) / (fadeEnd - fadeStart);
+        }
+
+        titleElement.style.opacity = opacity;
+      });
+    </script>
+  </body>
+</html>
