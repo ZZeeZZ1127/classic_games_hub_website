@@ -14,6 +14,7 @@ body, html {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  z-index: 1;
 }
 
 .programmers {
@@ -47,23 +48,13 @@ body, html {
   color:white;
 }
 
-.title {
-  position: relative;
-  z-index: 3;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  transition: opacity 0.3s ease-out;
-}
-
 /*navigation bars*/
 #navBars {
   display: inline-block;
   flex-direction: row;
   max-height: 5rem;
   position: fixed;
-  z-index: 3;
+  z-index: 2;
 }
 
 .navButtons {
@@ -91,12 +82,127 @@ h2 {
 }
 
 h3 {
-  font-size: 2em;
+  font-family: "Press Start 2P";
+  font-size: 1.5em;
 }
 
 p {
   font-family: VT323;
   font-size: 1.5em;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
+}
+
+/*new*/
+
+.info-container {
+  display: grid;
+  position: relative;
+  top: -90%;
+  grid-template-rows: 4fr, 2fr;
+  grid-template-columns: 2fr, minmax(100px, 2fr);
+  grid-gap: 1em;
+  justify-content: space-evenly;
+  z-index: 3;
+  overflow: auto;
+}
+
+/* game info */
+
+.game-info {
+  grid-area: 1 / 1 / 3 / 2;
+  display: grid;
+  grid-template-rows: 1fr, 3fr, 1fr;
+  grid-gap: 1em;
+}
+
+.title {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.GUI {
+  grid-area: 2 / 1 / 3 / 2; 
+}
+
+.GUI img {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.relatedInfo{
+  grid-area: 3 / 1 / 4 / 2;
+}
+
+/* author */
+
+.author-info {
+  display: grid;
+  grid-area: 1 / 2 / 2 / 4;
+  grid-template-rows: 1fr 4fr;
+  grid-template-columns: 1fr 10fr;
+  column-gap: 1em;
+}
+
+.profile {
+  grid-area: 1 / 1 / 2 / 2;
+  justify-self: center;
+  align-self: center;
+}
+
+.profile img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profileName {
+  grid-area: 1 / 2 / 2 / 3;
+  align-self: center;
+  justify-self: start;
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.intro {
+  grid-area: 2 / 1 / 3 / 3;
+  align-self: center;
+  justify-self: center;
+  /* max-width: 100%; */
+}
+
+/* link */
+
+.link-info {
+  grid-area: 2 / 2 / 3 / 4; 
+  display: grid;
+  align-self: baseline;
+  grid-template-columns: 1fr 10fr;
+}
+
+.linkIcon {
+  grid-area: 2 / 1 / 3 / 2;
+  justify-self: center;
+  align-self: center; 
+}
+
+.linkIcon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.link {
+  grid-area: 2 / 2 / 3 / 3;
+  justify-self: start;
+  align-self: center;
+}
+
+.link a {
+  color: white;
+  font-family: VT323;
+  font-size: 30px;
 }
